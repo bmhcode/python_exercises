@@ -1,0 +1,74 @@
+ls : list of files in the directory
+ls -a : all files with cached files
+
+git init                                  // if you want to start a new repo locally 
+git clone <repo-url>                      // repo in github you want to start working with it locally
+git status                                // To check the current status of the repo
+git status -s Or git status --short       // To get a short description of the status
+git add . or git add <file-name>          // To add a file to the repo Or to add a modified file to the staged files
+git commit -m "<commit-message>"             To make the commit
+
+//Ignoring files
+
+ - you can ignore files by adding the into .gitignore file with some extension like (ext , .html, .py),
+ 
+// Removing Files :
+
+- git rm <file-name>             removes the file from tracked files and remove it frome the directory it self.
+- git rm --cached <file-name>    To remove a file only from git 
+
+// The History :
+
+- git log                        To get the history of the repo
+
+EB: Working With Remotes :
+
+git Remotes
+origin
+git remote -v
+git remote add <shortname> <url>
+git pull origin master
+git push <remote-name> <branch-name>   Example : git push origin main
+
+Branches :
+git branch <branch-name>                       To create a branch
+git checkout branch <branch-name>              To checkout to a branch
+git checkout 8cf3ed74e0510c164578f9cf80916d    To checkout to a Hush
+git branch -d <branch-name>                    To remove a branch
+git checkout -b <branch-name>                  To create a branch and checkout to that branch in one command
+git branch                                     To get the branches in the repo and to know in with branch you are in 
+git status                                     When there is a conflict and the merge is bending and you want to see with files are causing the conflict
+
+
+
+
+Git Flow
+        - Master
+        - Dev 
+Github Flow
+        - Master
+        - Pull requests
+Trunk-based
+        - Master
+
+
+
+
+git init
+git branch -M main
+git remote add origin https://github.com/username/example_repo.git
+git push -u origin main
+
+
+These two steps worked for me!
+Step 1:
+git remote set-url origin https://github.com/username/example_repo.git
+Step 2:
+git push --set-upstream -f origin main
+
+
+
+update files
+git add .
+git commit -m "comment"
+git push origin main
